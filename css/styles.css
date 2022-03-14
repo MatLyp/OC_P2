@@ -1,0 +1,13 @@
+/* En assignant les couleurs à des variables et en les plaçant dans la pseudo-class "root" 
+nous pouvons les réutiliser dans n'importe quel partie du document html. 
+Facilite le repérage couleurs et permet d'éviter les erreurs ainsi que 
+de changer de couleur plus facilement si nous le souhaitons. */
+:root {
+    --main-blue: #0065FC;
+    --light-blue: #DEEBFF;
+    --grey: #F2F2F2;
+}
+
+* {
+    box-sizing: border-box;  
+}

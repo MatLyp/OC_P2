@@ -11,3 +11,17 @@ de changer de couleur plus facilement si nous le souhaitons. */
 * {
     box-sizing: border-box;  
 }
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-solid {
+    color: var(--main-blue);
+}

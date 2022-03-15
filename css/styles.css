@@ -1,27 +1,147 @@
-/* En assignant les couleurs à des variables et en les plaçant dans la pseudo-class "root" 
-nous pouvons les réutiliser dans n'importe quel partie du document html. 
-Facilite le repérage couleurs et permet d'éviter les erreurs ainsi que 
+    /*------Général------*/
+/* En assignant les couleurs à des variables et en les plaçant dans la pseudo-class "root"
+nous pouvons les réutiliser dans n'importe quel partie du document html.
+Facilite le repérage couleurs et permet d'éviter les erreurs ainsi que
 de changer de couleur plus facilement si nous le souhaitons. */
 :root {
     --main-blue: #0065FC;
     --light-blue: #DEEBFF;
     --grey: #F2F2F2;
 }
-
 * {
-    box-sizing: border-box;  
-}
-
-body {
+    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+}
+body {
     background-color: white;
+    margin: 0 2%;
 }
 
-.header-container {
+    /*------Header------*/
+
+header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+header img {
+    width: 80%;
+    margin-left: 20%;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0 20px;
+}
+.nav-links ul li a {
+    padding-top: 46px;
+    text-decoration: none;
+    color: black;
+}
+.nav-links ul li a:hover {
+    color: var(--main-blue);
+    border-top:2px solid var(--main-blue);
 }
 
-.fa-solid {
-    color: var(--main-blue);
+@media(max-width: 767px){
+    header {
+        flex-direction: column;
+    }
+    header img {
+        width: 50%;
+    }
+    .nav-links ul {
+        padding: 0;
+    }
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0;
+        padding: 0 20px;
+        
+    }
+    .nav-links ul li a {
+        text-decoration: none;
+        color: black;
+        padding:0 0 10px;
+        border-bottom:2px solid var(--grey);
+    }
+    .nav-links ul li a:hover {
+        color: var(--main-blue);
+        border-bottom:2px solid var(--main-blue);
+        border-top: 0;
+    }
+}
+
+    /*------Recherche------*/
+
+.title h1{
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+.title p {
+    margin-top: 0;
+    font-size: medium;
+}
+form {
+    display:flex;
+    margin-bottom: 40px;
+}
+#shape {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:var(--grey);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+.fa-location-dot{
+    color: black;
+}
+#searchbar {
+    border-left: none;
+    border-right: none;
+    border: 1px solid var(--grey);
+    margin: 0 -4;
+    padding: 0 12px;
+    height: 40px;
+}
+@media (min-width: 768px){
+    #search-btn {
+        background-color: var(--main-blue);
+        color: white;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 40px;
+        font-size:15px;
+        font-weight:600;
+        padding: 5px 15px;
+    }
+    #search-btn-small {
+        display: none;
+    }
+}
+@media (max-width: 767px){
+    #search-btn {
+        display: none;
+    }
+    #search-btn-small {
+    background-color: var(--main-blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 13px;
+    margin-left: -5px;
+    }
+}
+
+    /*------Filtres------*/
+
+.filters-container {
+    display: flex;
 }

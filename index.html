@@ -14,53 +14,65 @@
 </head>
 
 <body>
-
     <!-- -----Header----- -->
-    
     <header>
         <a href="index.html"><img src="assets/Booki.png" alt="logo-booki"/></a>
         <nav class="nav-links">
             <ul>
-                <li><a href="">Hébergements</a></li>
-                <li><a href="">Activités</a></li>
+                <li><a href="#" class="text">Hébergements</a></li><!-- Commentaire pour supprimer noeud un parasite 
+                --><li><a href="#" class="text">Activités</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-
     <!-- -----Recherche----- -->
-
         <section>
-            <div class="title">
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre ville ou en pleine nature</p>
+            <div>
+                <h1 class="title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p class="text">En plein centre ville ou en pleine nature</p>
             </div>
             <div>
                 <form>
                     <div id="shape"><i class="fa-solid fa-location-dot"></i></div>
-                    <input type="text" id="searchbar" placeholder="Région, Ville..."/><!--whitespace pour eviter un noeud parasite
-                    --><button type="submit" id="search-btn">Rechercher</button>
+                    <input type="text" id="searchbar" placeholder="Région, Ville..."/>
+                    <button type="submit" id="search-btn">Rechercher</button>
                     <button type="submit" id="search-btn-small"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
-            <nav class="filters-container">
+    <!-- -----Filtres----- -->        
+            <div class="filters-container">
                 <div>
-                    <p>Filtres</p>
+                    <p class="filters-text">Filtres</p>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-money-bill-wave"></i>Économique</a>
-                    <a href="#"><i class="fa-solid fa-child"></i>Familial</a>
-                    <a href="#"><i class="fa-solid fa-heart"></i>Romantique</a>
-                    <a href="#"><i class="fa-solid fa-dog"></i>Animaux autorisés</a>
+
+                <div class="filters-div">
+                    <div class="circle-shape">
+                        <i class="fa-solid fa-money-bill-wave icon-color"></i>
+                    </div>
+                    <a href="#" class="filters-box filters-text">Économique</a>
+
+                    <div class="circle-shape">
+                        <i class="fa-solid fa-child icon-color"></i>
+                    </div>
+                    <a href="#" class="filters-box filters-text">Familial</a>
+
+                    <div class="circle-shape">
+                        <i class="fa-solid fa-heart icon-color"></i>
+                    </div>
+                    <a href="#" class="filters-box filters-text">Romantique</a>
+
+                    <div class="circle-shape">
+                        <i class="fa-solid fa-dog icon-color"></i>
+                    </div>
+                    <a href="#" class="filters-box filters-text">Animaux autorisés</a>
                 </div>
-            </nav>
+            </div>
             <!-- <div>
                 <p><i class="fa-solid fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
             </div> -->
         </section>
 
-    <!-- -----Résultats de la recherche----- -->
+    <!-- -----Résultats recherche----- -->
 
     </main>
 

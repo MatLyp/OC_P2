@@ -22,7 +22,7 @@ body {
     background-color: white;
     margin: 0 2%;
 }
-@media(max-width: 767px) {
+@media screen and (max-width: 767px) {
     body {
         margin: 0;
     }
@@ -45,7 +45,12 @@ body {
     font-size:medium;
     font-weight: bold;
 }
-@media(max-width: 767px){
+.subtitle {
+    font-size: large;
+    font-weight: bolder;
+    margin: 0;
+}
+@media screen and (max-width: 767px){
     .title {
         font-size: 28px;
         margin: 10px 0;
@@ -90,7 +95,7 @@ header img {
     color: var(--main-blue);
 }
 
-@media(max-width: 767px){
+@media screen and (max-width: 767px) {
     header {
         flex-direction: column;
         margin-bottom: 30px;
@@ -150,7 +155,7 @@ form {
     width: 20%;
 }
 
-@media (min-width: 768px){
+@media screen and (min-width: 768px){
     #search-btn {
         background-color: var(--main-blue);
         color: white;
@@ -166,7 +171,7 @@ form {
         display: none;
     }
 }
-@media (max-width: 767px){
+@media screen and (max-width: 767px){
     #search-btn {
         display: none;
     }
@@ -184,19 +189,19 @@ form {
 }
 
     /*------Filtres------*/
-
 .filters-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    margin-bottom: 35px;
 }
 .filters-container div p {
     margin-right: 20px;
 }
 .filters-div {
-    width: 80%;
     display: flex;
-    
+    flex-wrap: wrap;
+}
+.filters-elem {
+    margin-bottom: 10px;
 }
 .circle-shape{
     display: inline-block;
@@ -206,28 +211,167 @@ form {
     text-align: center;
     line-height: 45px;
     background-color:var(--light-blue);
+    /* z-index: 1; */
 }
 .filters-box {
     border: 3px solid var(--grey);
-    border-left: none;
-    padding: 10px 25px;
-    margin-left: -22px;
-    margin-right: 1%;
+    padding: 10px 20px;
+    margin-left: -20px;
+    margin-right: 10px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    border-left: none;
 }
 .icon-color{
     color: var(--main-blue);
 }
-.filter-elem{
-    width: 25%;
-}
-/* @media(max-width: 991px) and (min-width: 768px){
+
+
+/* @media screen and (max-width:991px) and (min-width: 768px) {
     .filters-container {
         flex-direction: column;
-        align-items:flex-start;
     }
-}  */
+}
+@media screen and (max-width:767px) {
+    .filters-container {
+        flex-direction: column;
+    }    
+} */
+
+@media screen and (max-width:991px)  {
+    .filters-container {
+        flex-wrap: wrap;
+    }
+    
+}
+
+    /*------Paragraphe nombres resultats------*/
+
+#info {
+    font-size: 80%;
+    display: inline-block;
+}
+.fa-circle {
+    color: var(--grey);
+}
+.fa-info {
+    color: var(--main-blue);
+}
+#nbr-result-p {
+    display: inline;
+}
+
+    /*------Résultats recherche------*/
+
+.section-result-container {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.hebergements-container {
+    display: flex;
+    width: 68%;
+    background-color: var(--grey);
+    margin-right: 2%;
+    padding: 2%;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cards {
+    width: 31%;
+    height: 170px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.img-hebergements{
+    width: 96%;
+    height: 90px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 2%;
+}
+.card-title {
+    font-size:14px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 15px;
+}
+.card-subtitle {
+    font-size: smaller;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+.stars {
+    margin-top: 0;
+    margin-left: 15px;
+}
+.full-star {
+    color: var(--main-blue);
+}
+.empty-star {
+    color: var(--grey);
+}
+.fa-star {
+    font-size: 70%;
+}
+
+.populaire-container {
+    display: flex;
+    width: 30%;
+    padding: 2%;
+    background-color: var(--grey);
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.populaire-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.populaire-cards-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.populaire-cards {
+    width: 96%;
+    height: 120px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+    /*------Activités------*/
+
+
+
+
+
+
+
+
+
+
 
 
 

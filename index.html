@@ -16,7 +16,7 @@
 <body>
     <!-- -----Header----- -->
     <header>
-        <a href="index.html"><img src="assets/Booki.png" alt="logo-booki"/></a>
+        <a href="index.html"><img src="assets/logo/Booki.png" alt="logo-booki"/></a>
         <nav class="nav-links">
             <ul>
                 <li><a href="#" class="text">Hébergements</a></li><!-- Commentaire pour supprimer noeud un parasite 
@@ -25,7 +25,7 @@
         </nav>
     </header>
     <main>
-    <!-- -----Recherche----- -->
+            <!-- -----Recherche----- -->
         <section>
             <div>
                 <h1 class="title">Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -39,40 +39,176 @@
                     <button type="submit" id="search-btn-small"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
-    <!-- -----Filtres----- -->        
+        </section>
+        <!-- -----Filtres----- -->  
+        <section>      
             <div class="filters-container">
                 <div>
                     <p class="filters-text">Filtres</p>
                 </div>
-
                 <div class="filters-div">
-                    <div class="circle-shape">
-                        <i class="fa-solid fa-money-bill-wave icon-color"></i>
+                    <div class="filters-elem">
+                        <i class="circle-shape fa-solid fa-money-bill-wave icon-color"></i>
+                        <a href="#" class="filters-box filters-text teeest">Économique</a>
                     </div>
-                    <a href="#" class="filters-box filters-text">Économique</a>
-
-                    <div class="circle-shape">
-                        <i class="fa-solid fa-child icon-color"></i>
+                    <div class="filters-elem">
+                        <i class="circle-shape fa-solid fa-child icon-color"></i>
+                        <a href="#" class="filters-box filters-text">Familial</a>
                     </div>
-                    <a href="#" class="filters-box filters-text">Familial</a>
-
-                    <div class="circle-shape">
-                        <i class="fa-solid fa-heart icon-color"></i>
+                    <div class="filters-elem">
+                        <i class="circle-shape fa-solid fa-heart icon-color"></i>
+                        <a href="#" class="filters-box filters-text">Romantique</a>
                     </div>
-                    <a href="#" class="filters-box filters-text">Romantique</a>
-
-                    <div class="circle-shape">
-                        <i class="fa-solid fa-dog icon-color"></i>
+                    <div class="filters-elem">
+                        <i class="circle-shape fa-solid fa-dog icon-color"></i>
+                        <a href="#" class="filters-box filters-text teeest">Animaux autorisés</a>
                     </div>
-                    <a href="#" class="filters-box filters-text">Animaux autorisés</a>
                 </div>
             </div>
-            <!-- <div>
-                <p><i class="fa-solid fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
-            </div> -->
+            <!-- -----Paragraphe nombres resultats----- -->
+            <span>
+                <span class="fa-stack small" id="info">
+                    <i class="fa-regular fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-info fa-stack-1x"></i>
+                </span>
+                <p class="text" id="nbr-result-p">
+                    Plus de 500 logements sont disponibles dans cette ville
+                </p>
+            </span>
+            
         </section>
 
-    <!-- -----Résultats recherche----- -->
+        <!-- -----Résultats recherche----- -->
+
+        <section class="section-result-container">
+            
+            <div class="hebergements-container">
+
+                <h2 class="subtitle">Hébergements à Marseille</h2>
+
+                <div class="cards-container">
+                    <div class="cards">
+                        <img class="img-hebergements" src="assets\hebergements\4_small\marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="appt-img">
+                        <p class="card-title">Auberge La Cannebière</p>
+                        <p class="card-subtitle">Nuit à partir de <strong>25€</strong></p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star empty-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img class="img-hebergements" src="assets\hebergements\4_small\fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="appt-img">
+                        <p class="card-title">Hôtel du port</p>
+                        <p class="card-subtitle">Nuit à partir de <strong>52€</strong></p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star empty-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img class="img-hebergements" src="assets\hebergements\4_small\reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="appt-img">
+                        <p class="card-title">Hôtel Les mouettes</p>
+                        <p class="card-subtitle">Nuit à partir de <strong>76€</strong></p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star empty-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img class="img-hebergements" src="assets\hebergements\4_small\annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="appt-img">
+                        <p class="card-title">Hôtel de la mer</p>
+                        <p class="card-subtitle">Nuit à partir de <strong>46€</strong></p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star empty-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <img class="img-hebergements" src="assets\hebergements\4_small\nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="appt-img">
+                        <p class="card-title">Auberge Le Panier</p>
+                        <p class="card-subtitle">Nuit à partir de <strong>23€</strong></p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star empty-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="cards">
+                        <img class="img-hebergements" src="assets\hebergements\4_small\febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="appt-img">
+                        <p class="card-title">Hôtel chez Amina</p>
+                        <p class="card-subtitle">Nuit à partir de <strong>96€</strong></p>
+                        <div class="stars">
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star full-star"></i>
+                            <i class="fa-solid fa-star empty-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="filters-text">Afficher plus</p>
+            </div>
+            
+            <div class="populaire-container">
+
+                <div class="populaire-title-container">
+                    <h2 class="subtitle">Les plus populaires</h2>
+                    <i class="fa-solid fa-chart-line"></i> 
+                </div>
+
+                <div class="populaire-cards-container">
+
+                    <div class="populaire-cards">
+                        
+                    </div>
+
+                    <div class="populaire-cards">
+
+                    </div>
+
+                    <div class="populaire-cards">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- -----Activités----- -->
+
+        <!-- <section>
+
+            <h2 class="subtitle">Activités à Marseille</h2>
+
+            <div>
+
+            </div>
+
+
+
+        </section> -->
 
     </main>
 

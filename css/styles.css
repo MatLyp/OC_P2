@@ -26,7 +26,7 @@ body {
     body {
         margin: 0;
     }
-    body section{
+    body section, nav{
         margin: 0 5%;
     }
 }
@@ -49,6 +49,9 @@ body {
     font-size: large;
     font-weight: bolder;
     margin: 0;
+}
+.bold {
+    font-weight:900;
 }
 @media screen and (max-width: 767px){
     .title {
@@ -148,7 +151,7 @@ form {
     border-left: none;
     border-right: none;
     border: 1px solid var(--grey);
-    margin: 0 -4;
+    margin: 0;
     padding: 0 12px;
     height: 45px;
     width: 20%;
@@ -187,6 +190,7 @@ form {
 }
 
     /*------Filtres------*/
+
 .filters-container {
     display: flex;
     margin-bottom: 35px;
@@ -233,7 +237,6 @@ form {
     .filters-container {
         flex-wrap: wrap;
     }
-    
 }
 
     /*------Paragraphe nombres resultats------*/
@@ -247,9 +250,6 @@ form {
 }
 .fa-info {
     color: var(--main-blue);
-}
-#nbr-result-p {
-    display: inline;
 }
 
     /*------Résultats recherche------*/
@@ -270,23 +270,19 @@ form {
     border-radius: 15px;
     flex-direction: column;
 }
-.hebergements-container a {
-    font-size:medium;
-    font-weight: bold;
-    margin-top: 20px;
-}
 .cards-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 .cards {
+    display: flex;
+    flex-direction: column;
     width: 31%;
     height: 170px;
     background-color: white;
     border-radius: 15px;
     margin-top: 20px;
-    margin-bottom: 10px;
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .cards:hover {
@@ -295,7 +291,7 @@ form {
 .img-hebergements{
     width: 96%;
     height: 90px;
-    margin: 2%;
+    margin: 2% 2% 0 2%;
     object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -314,7 +310,9 @@ form {
     font-weight: 500;
 }
 .stars {
+    margin-top: auto;
     margin-left: 15px;
+    padding-bottom: 3%;
     display: inline-flex;
 }
 .full-star {
@@ -325,6 +323,11 @@ form {
 }
 .fa-star {
     font-size: 70%;
+}
+#show-more {
+    padding-top: 35px;
+    font-size:medium;
+    font-weight: bold;
 }
 
         /*------Populaires------*/
@@ -393,16 +396,15 @@ form {
     display: inline-flex;
 }
 
-
-
-
-
-/* @media screen and (max-width:991px) and (min-width: 768px) {
+@media screen and (max-width:991px) and (min-width: 768px) {
     .section-result-container {
         flex-direction: column-reverse;
         margin: 25px 0;
     }
-
+    .hebergements-container {
+        width: auto;
+        flex-direction: column;
+    }
     .populaire-container {
         display: flex;
         width: auto;
@@ -412,13 +414,13 @@ form {
         flex-direction: column;
         margin-bottom: 15px;
     }
-
     .populaire-cards-container {
         flex-direction: row;
     }
-
-} */
-
+    .populaire-cards-container a {
+        width: 100%;
+    }
+}
 @media screen and (max-width:767px) {
     .section-result-container {
         flex-direction: column-reverse;
@@ -428,10 +430,6 @@ form {
         display: flex;
         width: 100%;
         background-color: white;
-        max-width: 600px;
-        
-        /* padding: 2%; */
-        /* border-radius: 15px; */
     }
     .cards-container {
         flex-wrap: nowrap;
@@ -439,11 +437,7 @@ form {
     }
     .cards {
         width: auto;
-        /* height: 170px; */
-        /* margin-top: 20px; */
-        /* margin-bottom: 10px; */
     }
-
     .populaire-container {
         width: 100%;
         margin-bottom: 20px;
@@ -456,24 +450,26 @@ form {
     .populaire-cards {
         width: 100%;
         height: 120px;
-        
         margin-top: 10px;
         margin-bottom: 0;
         box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     }
-    
 }
 
 
 
 
-
-
-
-
-
-
     /*------Activités------*/
+
+
+
+
+
+
+
+
+
+
 
 
 

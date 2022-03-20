@@ -19,8 +19,8 @@
         <a href="index.html"><img src="assets/logo/Booki.png" alt="logo-booki"/></a>
         <nav class="nav-links">
             <ul>
-                <li><a href="#" class="text">Hébergements</a></li><!-- Commentaire pour supprimer noeud un parasite 
-                --><li><a href="#" class="text">Activités</a></li>
+                <li><a href="#hébergements" class="text">Hébergements</a></li><!-- Commentaire pour supprimer noeud un parasite 
+                --><li><a href="#activités" class="text">Activités</a></li>
             </ul>
         </nav>
     </header>
@@ -47,42 +47,45 @@
                     <p class="filters-text">Filtres</p>
                 </div>
                 <div class="filters-div">
-                    <div class="filters-elem">
+                    <a href="#" class="filters-box filters-text filters-elem">
                         <i class="circle-shape fa-solid fa-money-bill-wave icon-color"></i>
-                        <a href="#" class="filters-box filters-text">Économique</a>
-                    </div>
-                    <div class="filters-elem">
+                        Économique
+                    </a>
+
+                    <a href="#" class="filters-box filters-text filters-elem">
                         <i class="circle-shape fa-solid fa-child icon-color"></i>
-                        <a href="#" class="filters-box filters-text">Familial</a>
-                    </div>
-                    <div class="filters-elem">
+                        Familial
+                    </a>
+
+                    <a href="#" class="filters-box filters-text filters-elem">
                         <i class="circle-shape fa-solid fa-heart icon-color"></i>
-                        <a href="#" class="filters-box filters-text">Romantique</a>
-                    </div>
-                    <div class="filters-elem">
+                        Romantique
+                    </a>
+                    
+                    <a href="#" class="filters-box filters-text filters-elem">
                         <i class="circle-shape fa-solid fa-dog icon-color"></i>
-                        <a href="#" class="filters-box filters-text">Animaux autorisés</a>
-                    </div>
+                        Animaux autorisés
+                    </a>
                 </div>
             </div>
-            <!-- _____Paragraphe nombres resultats_____ -->
-            <span>
-                <span class="fa-stack small" id="info">
+
+            <!-- _____Paragraphe info resultats_____ -->
+
+            <span id="info-container">
+                <span class="fa-stack small" id="info-icon">
                     <i class="fa-regular fa-circle fa-stack-2x"></i>
                     <i class="fa-solid fa-info fa-stack-1x"></i>
                 </span>
-                Plus de 500 logements sont disponibles dans cette ville
+                <span class="text">Plus de 500 logements sont disponibles dans cette ville</span>
             </span>
             
         </nav>
 
-        <!-- _____Résultats-recherche_____ -->
-
-            <!-- _____Hébergements à Marseille_____ -->
+        <!-- _____Hébergements à Marseille_____ -->
 
         <section class="section-result-container">
             
-            <div class="hebergements-container">
+            <div class="hebergements-container" id="hébergements">
 
                 <h2 class="subtitle">Hébergements à Marseille</h2>
 
@@ -270,22 +273,75 @@
 
         <!-- _____Activités_____ -->
 
-        <!-- <section>
+        <section>
 
-            <h2 class="subtitle">Activités à Marseille</h2>
+            <h2 class="subtitle" id="activités">Activités à Marseille</h2>
 
-            <div>
+            <div class="activités-global-container">
+                <div class="activités-container">
+                    <div class="large-card shadow">
+                        <img class="img-activité" src="assets/activites/2_large/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port">
+                        <p>Vieux Port</p>
+                    </div>
+                    <div class="activités-smallcards-container">
+                        <div class="card60 shadow">
+                            <img class="img-activité" src="assets/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Vieux Port">
+                            <p>Fort de Pomègues</p>
+                        </div>
+                        <div class="card40 shadow">
+                            <img class="img-activité" src="assets/activites/2_large/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Vieux Port">
+                            <p>Îles du Frioul</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="activités-container">
+                    <div class="large-card shadow">
+                        <img class="img-activité" src="assets/activites/2_large/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Vieux Port">
+                        <p>Parc National des Calanques</p>
+                    </div>
+                    <div class="activités-smallcards-container">
+                        <div class="card50 shadow">
+                            <img class="img-activité" src="assets/activites/2_large/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Vieux Port">
+                            <p>Notre-Dame-de-la-Garde</p>
+                        </div>
+                        <div class="card50 shadow">
+                            <img class="img-activité" src="assets/activites/2_large/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Vieux Port">
+                            <div>
+                                <p>Parc Longchamp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
-
-        </section> -->
+        </section>
 
     </main>
 
     <footer>
+        
+        <div class="footer-bloc">
+            <p>A propos</p>
+            <p>Fonctionnement du site</p>
+            <p>Conditions générales de vente</p>
+            <p>Données et confidentialité</p>
+        </div>
+
+        <div class="footer-bloc">
+            <p>Nos Hébergements</p>
+            <p>Charte qualité</p>
+            <p>Soumettre votre hôtel</p>
+        </div>
+
+        <div class="footer-bloc">
+            <p>Assistance</p>
+            <p>Centre d'aide</p>
+            <p>Nous contacter</p>
+        </div>
 
     </footer>
+
 </body>
 </html>

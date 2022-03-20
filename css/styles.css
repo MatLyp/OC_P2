@@ -1,3 +1,5 @@
+    /* #region --variables-- */
+
 /* En assignant les couleurs à des variables et en les plaçant dans la pseudo-class ":root"
 nous pouvons les réutiliser dans n'importe quel partie du document html.
 Facilite le repérage couleurs et permet d'éviter les erreurs ainsi que
@@ -7,8 +9,9 @@ de modifier la couleur plus facilement si nous le souhaitons. */
     --light-blue: #DEEBFF;
     --grey: #F2F2F2;
 }
+/* #endregion --variables-- */
 
-    /*------Général------*/
+    /* #region --Général-- */
 
 * {
     box-sizing: border-box;
@@ -18,7 +21,7 @@ a {
     text-decoration: none;
     color: black;
 }
-body {
+section, nav {
     background-color: white;
     margin: 0 2%;
 }
@@ -30,8 +33,9 @@ body {
         margin: 0 5%;
     }
 }
+/* #endregion  --Général-- */
 
-    /*------Textes------*/
+    /* #region --Textes-- */
 
 .title {
     font-size: x-large;
@@ -55,16 +59,15 @@ body {
 }
 @media screen and (max-width: 767px){
     .title {
-        font-size: 28px;
-        margin: 10px 0;
+        font-size: 22px;
     }
     .text {
-        font-size: large;
-        margin: 10px 0;
+        font-size: 14px;
     }
 }
+/* #endregion --Textes-- */
 
-    /*------Header------*/
+    /* #region --Header-- */
 
 header {
     display: flex;
@@ -124,8 +127,9 @@ header img {
         color: var(--main-blue);
     }
 }
+/* #endregion --Header-- */
 
-    /*------Recherche------*/
+    /* #region --Recherche-- */
 
 form {
     display:flex;
@@ -188,8 +192,9 @@ form {
         width: 80%;
     }
 }
+/* #endregion --Recherche-- */
 
-    /*------Filtres------*/
+    /* #region --Filtres-- */
 
 .filters-container {
     display: flex;
@@ -206,26 +211,26 @@ form {
     margin-bottom: 10px;
 }
 .circle-shape {
-    display: inline-block;
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
     border-radius: 50%;
+    margin-right: 5px;
+    margin-left: -1px;
     text-align: center;
-    line-height: 44px;
     background-color:var(--light-blue);
     z-index: 2;
-    position: relative
+    position: relative;
 }
 .filters-box {
-    border: 3px solid var(--grey);
-    padding: 10px 20px;
-    margin-left: -20px;
+    outline: 3px solid var(--grey);
+    outline-offset: -3px;
+    border-radius: 50px;
+    padding-right: 20px;
     margin-right: 10px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
     z-index: 1;
 }
-.filters-elem:hover>.filters-box {
+.filters-elem:hover {
     transition: 0.5s;
     background-color: var(--grey);
     color: var(--main-blue);
@@ -238,12 +243,13 @@ form {
         flex-wrap: wrap;
     }
 }
+/* #endregion --Filtres-- */
 
-    /*------Paragraphe nombres resultats------*/
+    /* #region --Paragraphe info resultats-- */
 
-#info {
+#info-icon {
     font-size: 80%;
-    display: inline-block;
+    margin-right: 1%;
 }
 .fa-circle {
     color: var(--grey);
@@ -251,10 +257,13 @@ form {
 .fa-info {
     color: var(--main-blue);
 }
-
-    /*------Résultats recherche------*/
+#info-container {
+    display: flex;
+    align-items: center;
+}
+/* #endregion --Paragraphe info resultats-- */
        
-        /*------Hébergements------*/
+    /* #region --Hébergements à Marseille-- */
 
 .section-result-container {
     display: flex;
@@ -287,6 +296,9 @@ form {
 }
 .cards:hover {
     box-shadow:1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.cards:active {
+    background-color: var(--light-blue);
 }
 .img-hebergements{
     width: 96%;
@@ -329,8 +341,9 @@ form {
     font-size:medium;
     font-weight: bold;
 }
+/* #endregion --Hébergements à Marseille-- */
 
-        /*------Populaires------*/
+    /* #region --Populaires-- */
 
 .populaire-container {
     display: flex;
@@ -364,6 +377,9 @@ form {
 .populaire-cards:hover {
     box-shadow:1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+.populaire-cards:active {
+    background-color: var(--light-blue);
+}
 .pop-card-img-container {
     width: 40%;
 }
@@ -395,6 +411,9 @@ form {
     margin-bottom: 5px;
     display: inline-flex;
 }
+/* #endregion --Populaires-- */
+
+    /* #region --Media queries Hebergements/Populaire-- */
 
 @media screen and (max-width:991px) and (min-width: 768px) {
     .section-result-container {
@@ -404,6 +423,7 @@ form {
     .hebergements-container {
         width: auto;
         flex-direction: column;
+        margin-right: 0;
     }
     .populaire-container {
         display: flex;
@@ -455,35 +475,187 @@ form {
         box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     }
 }
+/* #endregion --Media queries Hebergements/Populaire-- */
 
+    /* #region --Activités-- */
 
+.activités-global-container {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    /* background-color: bisque; */
+    /* border: 2px solid green; */
+}
+/* .activités-global-container p {
+    font-weight: bold;
+    font-size: small;
+    padding-left: 10px;
+    margin: 0;
+} */
+.activités-container {
+    display: flex;
+    justify-content: space-between;
+    width: 49%;
+    height: 350px;
+    margin: 2% 0;
+    /* background-color: aquamarine; */
+    /* border: 2px solid red; */
+}
 
+.large-card {
+    width: 48%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    /* background-color: #DEEBFF; */
+    /* border: 2px solid blueviolet; */
 
-    /*------Activités------*/
+}
 
+.activités-smallcards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* border: 2px solid green; */
+}
 
+.card60 {
+    width: auto;
+    height: 57%;
+    border-radius: 15px;
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    /* background-color: #DEEBFF; */
+    /* border: 2px solid blueviolet; */
 
+}
 
+.card40 {
+    width: auto;
+    height: 37%;
+    border-radius: 15px;
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    /* background-color: #DEEBFF; */
+    /* border: 2px solid blueviolet; */
 
+}
 
+.card50 {
+    width: auto;
+    height: 47%;
+    border-radius: 15px;
+    box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    /* background-color: #DEEBFF; */
+    /* border: 2px solid blueviolet; */
+}
 
+.shadow {
+    display: flex;
+    flex-direction: column;
+    
+}
+.shadow p {
+    display: block;
+    height: 30px;
+    padding-top: 6px;
+    font-weight: bold;
+    font-size: small;
+    padding-left: 15px;
+    margin: 0;
+    /* height: auto; */
+    /* height: 40px; */
+    /* border: 2px solid red; */
+}
 
+.img-activité {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
+@media screen and (max-width:991px) and (min-width: 768px) {
 
+    .activités-global-container {
+        flex-direction: column;
+    }
+    .activités-container:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+    .activités-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width:767px) {
 
+    .activités-global-container {
+        flex-direction: column;
+    }
+    .activités-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .activités-smallcards-container {
+        gap: 20px;
+        width: 100%;
+    }
 
+    .large-card {
+        width: auto;
+        height: 170px;
+    }
+    .card60 {
+        width: auto;
+        height: 170px;
+    }
+    .card40 {
+        width: auto;
+        height: 170px;
+    }
+    .card50 {
+        width: auto;
+        height: 170px;
+    }
+}
+/* #endregion --Activités-- */
 
+    /* #region --Footer-- */
 
+footer {
+    background-color: var(--grey);
+    height: 130px;
+    padding-left: 2%;
+    padding-top: 10px;
+    margin-top: 30px;
+    display: flex;
+}
+.footer-bloc {
+    width: 30%;
+}
+.footer-bloc > p:first-child {
+    font-weight: bold;
+    font-size: small;
+}
+.footer-bloc > p:not(:first-child) {
+    font-size: x-small;
+}
 
+@media screen and (max-width:767px) {
 
+    footer {
+        height: auto;
+        padding: 15px 4%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-bloc {
+        width: auto;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
+/* #endregion --Footer-- */

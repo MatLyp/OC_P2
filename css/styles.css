@@ -1,9 +1,5 @@
     /* #region --variables-- */
 
-/* En assignant les couleurs à des variables et en les plaçant dans la pseudo-class ":root"
-nous pouvons les réutiliser dans n'importe quel partie du document html.
-Facilite le repérage couleurs et permet d'éviter les erreurs ainsi que
-de modifier la couleur plus facilement si nous le souhaitons. */
 :root {
     --main-blue: #0065FC;
     --light-blue: #DEEBFF;
@@ -35,7 +31,7 @@ section, nav {
 }
 /* #endregion  --Général-- */
 
-    /* #region --Textes-- */
+    /* #region --Texts-- */
 
 .title {
     font-size: x-large;
@@ -65,7 +61,7 @@ section, nav {
         font-size: 14px;
     }
 }
-/* #endregion --Textes-- */
+/* #endregion --Texts-- */
 
     /* #region --Header-- */
 
@@ -129,7 +125,7 @@ header img {
 }
 /* #endregion --Header-- */
 
-    /* #region --Recherche-- */
+    /* #region --Research-- */
 
 form {
     display:flex;
@@ -192,9 +188,9 @@ form {
         width: 80%;
     }
 }
-/* #endregion --Recherche-- */
+/* #endregion --Research-- */
 
-    /* #region --Filtres-- */
+    /* #region --Filters-- */
 
 .filters-container {
     display: flex;
@@ -243,9 +239,9 @@ form {
         flex-wrap: wrap;
     }
 }
-/* #endregion --Filtres-- */
+/* #endregion --Filters-- */
 
-    /* #region --Paragraphe info resultats-- */
+    /* #region --Info results-- */
 
 #info-icon {
     font-size: 80%;
@@ -261,16 +257,16 @@ form {
     display: flex;
     align-items: center;
 }
-/* #endregion --Paragraphe info resultats-- */
+/* #endregion --Info results-- */
        
-    /* #region --Hébergements à Marseille-- */
+    /* #region --Lodgments-- */
 
 .section-result-container {
     display: flex;
     margin-top: 35px;
     margin-bottom: 50px;
 }
-.hebergements-container {
+.lodgment-container {
     display: flex;
     width: 68%;
     background-color: var(--grey);
@@ -295,12 +291,12 @@ form {
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 .cards:hover {
-    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 .cards:active {
     background-color: var(--light-blue);
 }
-.img-hebergements{
+.img-lodgment{
     width: 96%;
     height: 90px;
     margin: 2% 2% 0 2%;
@@ -341,11 +337,11 @@ form {
     font-size:medium;
     font-weight: bold;
 }
-/* #endregion --Hébergements à Marseille-- */
+/* #endregion --Lodgments-- */
 
-    /* #region --Populaires-- */
+    /* #region --Populars-- */
 
-.populaire-container {
+.popular-container {
     display: flex;
     width: 30%;
     padding: 2%;
@@ -353,17 +349,17 @@ form {
     border-radius: 15px;
     flex-direction: column;
 }
-.populaire-title-container {
+.popular-title-container {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items:center;
 }
-.populaire-cards-container {
+.popular-cards-container {
     display: flex;
     flex-direction: column;
 }
-.populaire-cards {
+.popular-cards {
     width: 96%;
     height: 120px;
     background-color: white;
@@ -374,10 +370,10 @@ form {
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     display: flex;
 }
-.populaire-cards:hover {
-    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.5);
+.popular-cards:hover {
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.8);
 }
-.populaire-cards:active {
+.popular-cards:active {
     background-color: var(--light-blue);
 }
 .pop-card-img-container {
@@ -411,21 +407,21 @@ form {
     margin-bottom: 5px;
     display: inline-flex;
 }
-/* #endregion --Populaires-- */
+/* #endregion --Populars-- */
 
-    /* #region --Media queries Hebergements/Populaire-- */
+    /* #region --Media queries lodgment/popular-- */
 
 @media screen and (max-width:991px) and (min-width: 768px) {
     .section-result-container {
         flex-direction: column-reverse;
         margin: 25px 0;
     }
-    .hebergements-container {
+    .lodgment-container {
         width: auto;
         flex-direction: column;
         margin-right: 0;
     }
-    .populaire-container {
+    .popular-container {
         display: flex;
         width: auto;
         padding: 2%;
@@ -434,10 +430,10 @@ form {
         flex-direction: column;
         margin-bottom: 15px;
     }
-    .populaire-cards-container {
+    .popular-cards-container {
         flex-direction: row;
     }
-    .populaire-cards-container a {
+    .popular-cards-container a {
         width: 100%;
     }
 }
@@ -446,7 +442,7 @@ form {
         flex-direction: column-reverse;
         margin: 25px 0;
     }
-    .hebergements-container {
+    .lodgment-container {
         display: flex;
         width: 100%;
         background-color: white;
@@ -458,16 +454,16 @@ form {
     .cards {
         width: auto;
     }
-    .populaire-container {
+    .popular-container {
         width: 100%;
         margin-bottom: 20px;
         border-radius: 0px;
         padding: 30px 5%;
     }
-    .populaire-title-container {
+    .popular-title-container {
         margin-bottom:  15px;
     }
-    .populaire-cards {
+    .popular-cards {
         width: 100%;
         height: 120px;
         margin-top: 10px;
@@ -475,31 +471,31 @@ form {
         box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
     }
 }
-/* #endregion --Media queries Hebergements/Populaire-- */
+/* #endregion --Media queries lodgment/popular-- */
 
-    /* #region --Activités-- */
+    /* #region --Activities-- */
 
-.activités-global-container {
+.activities-global-container {
     display: flex;
     justify-content: space-between;
-    width: auto;
-    /* background-color: bisque; */
-    /* border: 2px solid green; */
+    margin: 2% 0;
 }
-/* .activités-global-container p {
-    font-weight: bold;
-    font-size: small;
-    padding-left: 10px;
-    margin: 0;
-} */
-.activités-container {
+.activities-global-container a:hover {
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.8);
+    background-color: var(--light-blue);
+}
+.activities-container {
     display: flex;
     justify-content: space-between;
     width: 49%;
     height: 350px;
-    margin: 2% 0;
-    /* background-color: aquamarine; */
-    /* border: 2px solid red; */
+}
+.activities-smallcards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%;
+    height: 100%;
 }
 
 .large-card {
@@ -507,122 +503,107 @@ form {
     height: auto;
     border-radius: 15px;
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    /* background-color: #DEEBFF; */
-    /* border: 2px solid blueviolet; */
-
-}
-
-.activités-smallcards-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 48%;
-    height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    /* border: 2px solid green; */
 }
 
 .card60 {
-    width: auto;
-    height: 57%;
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    /* background-color: #DEEBFF; */
-    /* border: 2px solid blueviolet; */
-
+}
+.card60 img {
+    height: 143px;
 }
 
 .card40 {
-    width: auto;
-    height: 37%;
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    /* background-color: #DEEBFF; */
-    /* border: 2px solid blueviolet; */
-
+}
+.card40 img {
+    height: 117px;
 }
 
 .card50 {
-    width: auto;
-    height: 47%;
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-    /* background-color: #DEEBFF; */
-    /* border: 2px solid blueviolet; */
+}
+.card50 img {
+    height: 130px;
 }
 
-.shadow {
-    display: flex;
-    flex-direction: column;
-    
-}
-.shadow p {
-    display: block;
-    height: 30px;
-    padding-top: 6px;
-    font-weight: bold;
-    font-size: small;
-    padding-left: 15px;
-    margin: 0;
-    /* height: auto; */
-    /* height: 40px; */
-    /* border: 2px solid red; */
-}
-
-.img-activité {
+.img-activity {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+.small-img-activity {
+    object-fit: cover;
+    min-height: 60%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+.card-container p {
+    display: block;
+    height: 35px;
+    padding-top: 10px;
+    padding-left: 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: small;
+}
+/* #endregion --Activities-- */
+
+    /* #region --Media queries activities-- */
 
 @media screen and (max-width:991px) and (min-width: 768px) {
 
-    .activités-global-container {
+    .activities-global-container {
         flex-direction: column;
+        gap: 25px;
     }
-    .activités-container:nth-child(2) {
+    .activities-container:nth-child(2) {
         flex-direction: row-reverse;
     }
-    .activités-container {
+    .activities-container {
         width: 100%;
     }
 }
 @media screen and (max-width:767px) {
 
-    .activités-global-container {
-        flex-direction: column;
-    }
-    .activités-container {
+    .activities-global-container {
         flex-direction: column;
         gap: 20px;
+    }
+    .activities-container {
+        flex-direction: column;
         width: 100%;
         height: auto;
+        gap: 20px;
     }
-    .activités-smallcards-container {
+    .activities-smallcards-container {
         gap: 20px;
         width: 100%;
     }
 
+    .small-img-activity, .img-activity {
+        height: 120px;
+    }
     .large-card {
         width: auto;
-        height: 170px;
-    }
-    .card60 {
-        width: auto;
-        height: 170px;
-    }
-    .card40 {
-        width: auto;
-        height: 170px;
-    }
-    .card50 {
-        width: auto;
-        height: 170px;
     }
 }
-/* #endregion --Activités-- */
+/* #endregion --Media queries activities-- */
 
     /* #region --Footer-- */
 
@@ -634,14 +615,14 @@ footer {
     margin-top: 30px;
     display: flex;
 }
-.footer-bloc {
+.footer-block {
     width: 30%;
 }
-.footer-bloc > p:first-child {
+.footer-block > p:first-child {
     font-weight: bold;
     font-size: small;
 }
-.footer-bloc > p:not(:first-child) {
+.footer-block > p:not(:first-child) {
     font-size: x-small;
 }
 
@@ -653,7 +634,7 @@ footer {
         display: flex;
         flex-direction: column;
     }
-    .footer-bloc {
+    .footer-block {
         width: auto;
     }
 }
